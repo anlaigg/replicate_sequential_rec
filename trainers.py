@@ -40,8 +40,8 @@ class Trainer:
     def valid(self, epoch, full_sort=False, verbose = False):
         return self.iteration(epoch, self.eval_dataloader, full_sort, train=False, verbose = verbose)
 
-    def test(self, epoch, full_sort=False):
-        return self.iteration(epoch, self.test_dataloader, full_sort, train=False)
+    def test(self, epoch, full_sort=False, verbose = False):
+        return self.iteration(epoch, self.test_dataloader, full_sort, train=False, verbose = verbose)
 
     def iteration(self, epoch, dataloader, full_sort=False, train=True):
         raise NotImplementedError
@@ -77,8 +77,9 @@ class Trainer:
         }
         if verbose:
             print(post_fix)
-            self.args.writer.add_scalar('HIT@10',recall[1], epoch)
-            self.args.writer.add_scalar('NDCG@10',ndcg[1], epoch)
+            if self.args.writer:
+                self.args.writer.add_scalar('HIT@10',recall[1], epoch)
+                self.args.writer.add_scalar('NDCG@10',ndcg[1], epoch)
 
         with open(self.args.log_file, 'a') as f:
             f.write(str(post_fix) + '\n')        
@@ -337,7 +338,7 @@ class FinetuneTrainer(Trainer):
 
                 if self.args.loss_type == 'BCE':
                     loss = self.bce_loss(sequence_output, target_pos, target_neg, self.args.sample_num)
-                elif self.args.loss_type == 'CCE':
+                elif self.args.loss_type == 'CCE':  # Ours
                     loss = self.cce_loss(sequence_output, target_pos)
                 elif self.args.loss_type == 'BPR':
                     loss = self.bpr_loss(sequence_output[:, -1, :], 

@@ -37,7 +37,7 @@ def neg_sample(item_set, item_size):  # 前闭后闭
 
 class EarlyStopping:
     """Early stops the training if validation loss doesn't improve after a given patience."""
-    def __init__(self, checkpoint_path, patience=7, verbose=False, delta=0):
+    def __init__(self, checkpoint_path, patience=7, verbose=False, delta=0, mode = 'increase'):
         """
         Args:
             patience (int): How long to wait after last time validation loss improved.
@@ -54,13 +54,19 @@ class EarlyStopping:
         self.best_score = None
         self.early_stop = False
         self.delta = delta
+        self.mode = mode # loss for decrease, metric for increse
 
     def compare(self, score):
-        for i in range(len(score)):
-            # 有一个指标增加了就认为是还在涨
-            if score[i] > self.best_score[i]+self.delta:
+        if len(score) == 1 and self.mode == 'decrease':
+            if score[0] < self.best_score[0]:
                 return False
-        return True
+            return True
+        elif self.mode == 'increase':
+            for i in range(len(score)):
+                # 有一个指标增加了就认为是还在涨
+                if score[i] > self.best_score[i]+self.delta:
+                    return False
+            return True
 
     def __call__(self, score, model):
         # score HIT@10 NDCG@10

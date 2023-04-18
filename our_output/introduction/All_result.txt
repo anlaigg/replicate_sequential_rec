@@ -1,0 +1,60 @@
+Ori-BCE sample metric: {'Epoch': 0, 'HIT@1': '0.0690', 'NDCG@1': '0.0690', 'HIT@5': '0.3047', 'NDCG@5': '0.1858', 'HIT@10': '0.5625', 'NDCG@10': '0.2682', 'MRR': '0.2098'}
+Ori-BCE full metric: {'Epoch': 0, 'HIT@5': '0.0364', 'NDCG@5': '0.0236', 'HIT@10': '0.0585', 'NDCG@10': '0.0308', 'HIT@20': '0.0900', 'NDCG@20': '0.0387'}
+{'epoch': 199, 'rec_avg_loss': '0.30937022', 'rec_cur_loss': '0.30450851', 'total training time': '483.4254', 'max mem': '285'}
+
+BCE-10 sample metric: {'Epoch': 0, 'HIT@1': '0.0790', 'NDCG@1': '0.0790', 'HIT@5': '0.3232', 'NDCG@5': '0.2006', 'HIT@10': '0.5739', 'NDCG@10': '0.2807', 'MRR': '0.2218'}
+BCE-10 full metric: {'Epoch': 0, 'HIT@5': '0.0422', 'NDCG@5': '0.0276', 'HIT@10': '0.0674', 'NDCG@10': '0.0357', 'HIT@20': '0.0987', 'NDCG@20': '0.0436'}
+{'epoch': 199, 'rec_avg_loss': '0.27999191', 'rec_cur_loss': '0.28811094', 'total training time': '536.9608', 'max mem': '372'}
+
+BCE-100 sample metric: {'Epoch': 0, 'HIT@1': '0.0710', 'NDCG@1': '0.0710', 'HIT@5': '0.3126', 'NDCG@5': '0.1900', 'HIT@10': '0.5678', 'NDCG@10': '0.2714', 'MRR': '0.2123'}
+BCE-100 full metric: {'Epoch': 0, 'HIT@5': '0.0427', 'NDCG@5': '0.0287', 'HIT@10': '0.0652', 'NDCG@10': '0.0359', 'HIT@20': '0.0981', 'NDCG@20': '0.0442'}
+{'epoch': 199, 'rec_avg_loss': '0.27877163', 'rec_cur_loss': '0.29900795', 'total training time': '864.0168', 'max mem': '1507'}
+
+BCE-500 sample metric: {'Epoch': 0, 'HIT@1': '0.0760', 'NDCG@1': '0.0760', 'HIT@5': '0.3301', 'NDCG@5': '0.2013', 'HIT@10': '0.5713', 'NDCG@10': '0.2787', 'MRR': '0.2198'}
+BCE-500 full metric: {'Epoch': 0, 'HIT@5': '0.0428', 'NDCG@5': '0.0275', 'HIT@10': '0.0669', 'NDCG@10': '0.0352', 'HIT@20': '0.0988', 'NDCG@20': '0.0432'}
+{'epoch': 199, 'rec_avg_loss': '0.27935736', 'rec_cur_loss': '0.27866122', 'total training time': '2893.3844', 'max mem': '6566'}
+
+BCE-1000 sample metric: {'Epoch': 0, 'HIT@1': '0.0794', 'NDCG@1': '0.0794', 'HIT@5': '0.3228', 'NDCG@5': '0.1997', 'HIT@10': '0.5784', 'NDCG@10': '0.2813', 'MRR': '0.2210'}
+BCE-1000 full metric: {'Epoch': 0, 'HIT@5': '0.0423', 'NDCG@5': '0.0278', 'HIT@10': '0.0656', 'NDCG@10': '0.0354', 'HIT@20': '0.0993', 'NDCG@20': '0.0438'}
+{'epoch': 199, 'rec_avg_loss': '0.27715183', 'rec_cur_loss': '0.29165292', 'total training time': '5610.4458', 'max mem': '12893'}
+
+BPR-10 sample metric: {'Epoch': 0, 'HIT@1': '0.0001', 'NDCG@1': '0.0001', 'HIT@5': '0.0005', 'NDCG@5': '0.0003', 'HIT@10': '0.0139', 'NDCG@10': '0.0043', 'MRR': '0.0797'}
+BPR-10 full metric: {'Epoch': 0, 'HIT@5': '0.0092', 'NDCG@5': '0.0051', 'HIT@10': '0.0165', 'NDCG@10': '0.0075', 'HIT@20': '0.0276', 'NDCG@20': '0.0103'}
+{'epoch': 199, 'rec_avg_loss': '0.00000010', 'rec_cur_loss': '0.00000008', 'total training time': '595.6534', 'max mem': '285'}
+
+BPR-100 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0000', 'NDCG@5': '0.0000', 'HIT@10': '0.8913', 'NDCG@10': '0.2576', 'MRR': '0.0983'}
+BPR-100 full metric: {'Epoch': 0, 'HIT@5': '0.0071', 'NDCG@5': '0.0045', 'HIT@10': '0.0132', 'NDCG@10': '0.0065', 'HIT@20': '0.0190', 'NDCG@20': '0.0079'}
+{'epoch': 199, 'rec_avg_loss': '0.00000009', 'rec_cur_loss': '0.00000015', 'total training time': '615.7602', 'max mem': '285'}
+
+BPR-max-10 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0000', 'NDCG@5': '0.0000', 'HIT@10': '0.0000', 'NDCG@10': '0.0000', 'MRR': '0.0829'}
+BPR-max-10 full metric: {'Epoch': 0, 'HIT@5': '0.0091', 'NDCG@5': '0.0051', 'HIT@10': '0.0168', 'NDCG@10': '0.0076', 'HIT@20': '0.0293', 'NDCG@20': '0.0107'}
+{'epoch': 89, 'rec_avg_loss': '4.15916447', 'rec_cur_loss': '4.15917253', 'total training time': '271.5979', 'max mem': '285'}
+
+BPR-max-100 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0000', 'NDCG@5': '0.0000', 'HIT@10': '0.0150', 'NDCG@10': '0.0044', 'MRR': '0.0905'}
+BPR-max-100 full metric: {'Epoch': 0, 'HIT@5': '0.0100', 'NDCG@5': '0.0054', 'HIT@10': '0.0167', 'NDCG@10': '0.0076', 'HIT@20': '0.0279', 'NDCG@20': '0.0104'}
+{'epoch': 58, 'rec_avg_loss': '4.16137927', 'rec_cur_loss': '4.16152954', 'total training time': '182.6640', 'max mem': '285'}
+
+TOP1-10 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0012', 'NDCG@5': '0.0005', 'HIT@10': '0.1526', 'NDCG@10': '0.0459', 'MRR': '0.0727'}
+TOP1-10 full metric: {'Epoch': 0, 'HIT@5': '0.0084', 'NDCG@5': '0.0053', 'HIT@10': '0.0164', 'NDCG@10': '0.0079', 'HIT@20': '0.0249', 'NDCG@20': '0.0100'}
+{'epoch': 147, 'rec_avg_loss': '0.07486082', 'rec_cur_loss': '0.08031902', 'total training time': '444.2302', 'max mem': '285'}
+
+TOP1-100 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0098', 'NDCG@5': '0.0038', 'HIT@10': '0.0105', 'NDCG@10': '0.0040', 'MRR': '0.0911'}
+TOP1-100 full metric: {'Epoch': 0, 'HIT@5': '0.0079', 'NDCG@5': '0.0045', 'HIT@10': '0.0160', 'NDCG@10': '0.0071', 'HIT@20': '0.0279', 'NDCG@20': '0.0101'}
+{'epoch': 139, 'rec_avg_loss': '0.25308779', 'rec_cur_loss': '0.28106874', 'total training time': '430.9163', 'max mem': '285'}
+
+TOP1-max-10 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0000', 'NDCG@5': '0.0000', 'HIT@10': '0.0022', 'NDCG@10': '0.0006', 'MRR': '0.0669'}
+TOP1-max-10 full metric: {'Epoch': 0, 'HIT@5': '0.0097', 'NDCG@5': '0.0059', 'HIT@10': '0.0166', 'NDCG@10': '0.0081', 'HIT@20': '0.0273', 'NDCG@20': '0.0108'}
+{'epoch': 171, 'rec_avg_loss': '0.00125579', 'rec_cur_loss': '0.00132900', 'total training time': '514.6807', 'max mem': '285'}
+
+TOP1-max-100 sample metric: {'Epoch': 0, 'HIT@1': '0.0000', 'NDCG@1': '0.0000', 'HIT@5': '0.0000', 'NDCG@5': '0.0000', 'HIT@10': '0.0005', 'NDCG@10': '0.0001', 'MRR': '0.0663'}
+TOP1-max-100 full metric: {'Epoch': 0, 'HIT@5': '0.0093', 'NDCG@5': '0.0058', 'HIT@10': '0.0148', 'NDCG@10': '0.0076', 'HIT@20': '0.0270', 'NDCG@20': '0.0107'}
+{'epoch': 103, 'rec_avg_loss': '0.00394164', 'rec_cur_loss': '0.00385214', 'total training time': '280.2271', 'max mem': '285'}
+
+CE sample metric: {'Epoch': 0, 'HIT@1': '0.0619', 'NDCG@1': '0.0619', 'HIT@5': '0.2992', 'NDCG@5': '0.1781', 'HIT@10': '0.5600', 'NDCG@10': '0.2616', 'MRR': '0.2026'}
+CE full metric: {'Epoch': 0, 'HIT@5': '0.0356', 'NDCG@5': '0.0254', 'HIT@10': '0.0516', 'NDCG@10': '0.0306', 'HIT@20': '0.0716', 'NDCG@20': '0.0356'}
+{'epoch': 199, 'rec_avg_loss': '2.51558869', 'rec_cur_loss': '2.69710135', 'total training time': '241.0343', 'max mem': '286'}
+
+CCE sample metric: {'Epoch': 0, 'HIT@1': '0.0821', 'NDCG@1': '0.0821', 'HIT@5': '0.3648', 'NDCG@5': '0.2228', 'HIT@10': '0.6254', 'NDCG@10': '0.3066', 'MRR': '0.2360'}
+CCE full metric: {'Epoch': 0, 'HIT@5': '0.0664', 'NDCG@5': '0.0477', 'HIT@10': '0.0936', 'NDCG@10': '0.0564', 'HIT@20': '0.1285', 'NDCG@20': '0.0652'}
+{'epoch': 199, 'rec_avg_loss': '5.84623208', 'rec_cur_loss': '6.04197550', 'total training time': '263.7939', 'max mem': '607'}
+

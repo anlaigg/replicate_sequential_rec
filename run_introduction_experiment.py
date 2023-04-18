@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2020/11/5 21:11
+# @Author  : Hui Wang
+
 import os
 import numpy as np
 import random
@@ -8,7 +12,7 @@ import time
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 
 from datasets import SASRecDataset
-from trainer import FinetuneTrainer
+from trainers import FinetuneTrainer
 from models import S3RecModel
 from utils import EarlyStopping, get_user_seqs, get_user_seqs_and_sample, get_item2attribute_json, check_path, set_seed
 
@@ -16,13 +20,13 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--data_dir', default='./data/', type=str)
-    parser.add_argument('--output_dir', default='output_recsys/beauty_sasrec_all_loss_benchmark/', type=str)
+    parser.add_argument('--output_dir', default='output/introduction/', type=str)
     parser.add_argument('--data_name', default='Beauty', type=str)
     parser.add_argument('--do_eval', action='store_true')
     parser.add_argument('--ckp', default=0, type=int, help="pretrain epochs 10, 20, 30...")
 
     # model args
-    parser.add_argument("--model_name", default='SASRec', type=str)
+    parser.add_argument("--model_name", default='Finetune_sample', type=str)
     parser.add_argument("--hidden_size", type=int, default=64, help="hidden size of transformer model")
     parser.add_argument("--num_hidden_layers", type=int, default=2, help="number of layers")
     parser.add_argument('--num_attention_heads', default=2, type=int)
@@ -111,9 +115,6 @@ def main():
                   'CCE': lambda: args_change(args, 'CCE'),
                  }
 
-    args.output_dir = 'output_recsys/supplement2_beauty_sasrec_all_loss_benchmark/'
-    check_path(args.output_dir)
-
     model_result = {}
 
     for model_name in model_args:
@@ -159,7 +160,7 @@ def main():
             except FileNotFoundError:
                 print(f'{pretrained_path} Not Found! The Model is same as SASRec')
 
-            early_stopping = EarlyStopping(args.checkpoint_path, patience=20, verbose=True)
+            early_stopping = EarlyStopping(args.checkpoint_path, patience=20, verbose=True, mode = 'decrease')
             start_time = time.time()
             for epoch in range(args.epochs):
                 post_fix, avg_loss = trainer.train(epoch)

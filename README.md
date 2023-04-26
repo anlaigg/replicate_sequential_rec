@@ -18,18 +18,18 @@ We provide a simple script file for one-step reproduction of the experimental re
 python run_introduction_experiment.py
 ```
 
-Result save at `.output/introduction/All_result.txt`, and the training log save at  `.output/introduction/.*`
+Result save at `./output/introduction/All_result.txt`, and the training log save at  `./output/introduction/.*`
 
 ### Experiment table result.
 ![Table2](table2.jpg)
 
-We provide a convenient way to reproduce the experimental results in the table below:
+We provide a convenient way to reproduce the experimental results in the table:
 
 ```python
 sh table2_results.sh
 ```
 
-Result will save at `output/` folder, and we our training log already save at `our_output/` folder.
+Result will save at `output/` folder, and our training log already save at `our_output/` folder.
 
 # Replicating Results of Enhanced Loss Function on [Aprec repo](https://github.com/asash/bert4rec_repro).
 

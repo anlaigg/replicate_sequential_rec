@@ -39,3 +39,17 @@ We did not fork the [Aprec repo](https://github.com/asash/bert4rec_repro) at thi
 
 ### Note
 If you have any question please leave message at ISSUE.
+
+### Cite
+If you find the our codes and datasets useful for your research or development, please cite our paper:
+
+```
+@misc{li2023effective,
+      title={Effective and Efficient Training for Sequential Recommendation Using Cumulative Cross-Entropy Loss}, 
+      author={Fangyu Li and Shenbao Yu and Feng Zeng and Fang Yang},
+      year={2023},
+      eprint={2301.00979},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
+}
+```
